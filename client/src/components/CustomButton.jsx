@@ -5,7 +5,7 @@ import { useSnapshot } from 'valtio';
 import state from '../store';
 
 const CustomButton = ({ type, title, customStyles, handleClick }) => {
-  const snap = useSnapshot(state)
+  const snap = useSnapshot(state);
 
   const generateStyle = (type) => {
     if(type === 'filled') {
