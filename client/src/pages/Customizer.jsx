@@ -12,8 +12,31 @@ import { fadeAnimation, slideAnimation } from '../config/motion';
 import { AIPicker, ColorPicker, CustomButton, FilePicker, Tab } from '../components';
 
 const Customizer = () => {
+  const snap = useSnapshot(state);
   return (
-    <div>Customizer</div>
+    <AnimatePresence>
+      {!snap.intro && (
+        <>
+          <motion.div
+            key="custom"
+            className='absolute top-0 left-0 z-10'
+            {...slideAnimation('left')}
+          >
+            <div className='flex items-center min-h-screen'>
+              <div className='editortabs-container tabs'>
+                {EditorTabs.map((tab) => (
+                  <Tab
+                    key={tab.name}
+                    tab={tab}
+                    handleClick={() => {}}
+                  />
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
   )
 }
 
