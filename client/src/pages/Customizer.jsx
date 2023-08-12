@@ -52,7 +52,10 @@ const Customizer = () => {
     if(!prompt) return alert("Please enter a prompt");
 
     try {
-      // call our backend to generate an ai image!
+      setGeneratingImg(true);
+
+      const response = await fetch('localhost:8080')
+
     } catch (error) {
       alert(error)
     } finally {
