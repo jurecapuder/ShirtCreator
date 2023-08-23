@@ -25,14 +25,14 @@ const AIPicker = ({ prompt, setPrompt, generatingImg, handleSubmit}) => {
             <CustomButton
               type="outline"
               title="AI Logo"
-              handleClick={() => alert('Temporarily disabled.')}
+              handleClick={() => alert('Temporarily disabled.')} // handleSubmit('logo')}
               customStyles="text-xs"
             />
 
             <CustomButton
               type="filled"
               title="AI Full"
-              handleClick={() => alert('Temporarily disabled.')}
+              handleClick={() => alert('Temporarily disabled.')} // handleSubmit('full')}
               customStyles="text-xs"
             />
           </>
